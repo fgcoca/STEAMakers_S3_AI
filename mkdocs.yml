@@ -1,5 +1,5 @@
 # 1. Información de la web
-site_name: STEAMakers_S3_AI
+site_name: STEAMakers S3 AI
 site_description: Información y ejemplos de uso de la placa ESP32 STEAMakers S3 AI centrados especialmente en la pantalla TFT y su programación con STEAMakersBlocks
 site_author: Federico Coca
 site_url: https://fgcoca.github.io/STEAMakers_S3_AI/
@@ -155,11 +155,15 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
 # 8. Necesario para la extensión pydownx.arithmatex
 extra_javascript:
-  #- plugins/mathjax.js
-  #- https://polyfill.io/v3/polyfill.min.js?features=es6
-  #- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - plugins/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
 
 # 9. Plugins
 plugins:

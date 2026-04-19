@@ -7,8 +7,8 @@ Incorpora el microcontrolador ESP32-S3 WROOM-1, con mayor capacidad de procesami
 
 Permite acceder a la plataforma [ai.keyestudio.com](https://ai.keyestudio.com/login) mediante el número único de la placa, para comunicarse con la IA, ejecutar órdenes, analizar datos o controlar sensores y actuadores directamente desde el aula.
 
-<center>
+==**^^Enlaces de interés^^**==
 
-![](./img/esp32_steamakers_ai.jpg)  
-
-</center>
+* [Documentación de Ardutaller](https://www.ardutaller.com.es/steamakers/esp32steamakers-ai)
+* [Documentación fuente de esta introducción](https://www.steamakers.ai/)
+* [Manual en línea de ESP32 STEAMakers AI](https://docs.google.com/document/d/1DhM9TOxPvbo_rmasO_L4B3AARezSWGT0ukBRjAOVnVw/edit?tab=t.0#heading=h.h965agca913u)
