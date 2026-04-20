@@ -1,0 +1,1332 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Información y ejemplos de uso de la placa ESP32 STEAMakers S3 AI centrados especialmente en la pantalla TFT y su programación con STEAMakersBlocks">
+      
+      
+        <meta name="author" content="Federico Coca">
+      
+      
+        <link rel="canonical" href="https://fgcoca.github.io/STEAMakers_S3_AI/SM_S3/acerca_img/">
+      
+      
+        <link rel="prev" href="../usb/">
+      
+      
+        <link rel="next" href="../acerca_RGB/">
+      
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+    
+    
+      
+        <title>Formato de imágenes - STEAMakers S3 AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="deep-purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conceptos-base" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="STEAMakers S3 AI" class="md-header__button md-logo" aria-label="STEAMakers S3 AI" data-md-component="logo">
+      
+  <img src="../../img/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            STEAMakers S3 AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Formato de imágenes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="deep-purple"  aria-label="Modo Oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo Oscuro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="deep-purple"  aria-label="Modo Claro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo Claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fgcoca/STEAMakers_S3_AI" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    STEAMakers_S3_AI
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="STEAMakers S3 AI" class="md-nav__button md-logo" aria-label="STEAMakers S3 AI" data-md-component="logo">
+      
+  <img src="../../img/favicon.png" alt="logo">
+
+    </a>
+    STEAMakers S3 AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fgcoca/STEAMakers_S3_AI" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    STEAMakers_S3_AI
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Inicio y principios básicos IA
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Inicio y principios básicos IA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ini/inicio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bienvenida
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ini/pap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paso a paso
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ini/recursos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recursos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Placa STEAMakers S3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Placa STEAMakers S3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notas previas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pinout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pinout ESP32
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Acerca de
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Acerca de
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    USB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Formato de imágenes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Formato de imágenes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-base" class="md-nav__link">
+    Conceptos base
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guru-meditation-error" class="md-nav__link">
+    Guru Meditation Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-del-lienzo-en-gimp" class="md-nav__link">
+    Tamaño del lienzo en GIMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-de-la-impresion-en-gimp" class="md-nav__link">
+    Tamaño de la impresión en GIMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalar-la-imagen-en-gimp" class="md-nav__link">
+    Escalar la imagen en GIMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recortar-imagen-en-gimp" class="md-nav__link">
+    Recortar imagen en GIMP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-en-gimp" class="md-nav__link">
+    Archivos en GIMP
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivos en GIMP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formatos-de-archivo-en-gimp" class="md-nav__link">
+    Formatos de archivo en GIMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportar-imagen-como-jpeg" class="md-nav__link">
+    Exportar imagen como jpeg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportar-imagen-como-bmp" class="md-nav__link">
+    Exportar imagen como BMP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reducir-el-tamano-del-archivo" class="md-nav__link">
+    Reducir el tamaño del archivo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acerca_RGB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RGB565 / RGB888
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TFT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pantalla  TFT-SPI-ST7788
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Programación STEAMakersBlocks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Programación STEAMakersBlocks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SMB/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SMB/bloques_tft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloques TFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Miscelanea
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Miscelanea
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Miscelanea/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Miscelanea/lic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Miscelanea/soft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software utilizado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-base" class="md-nav__link">
+    Conceptos base
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guru-meditation-error" class="md-nav__link">
+    Guru Meditation Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-del-lienzo-en-gimp" class="md-nav__link">
+    Tamaño del lienzo en GIMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-de-la-impresion-en-gimp" class="md-nav__link">
+    Tamaño de la impresión en GIMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalar-la-imagen-en-gimp" class="md-nav__link">
+    Escalar la imagen en GIMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recortar-imagen-en-gimp" class="md-nav__link">
+    Recortar imagen en GIMP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-en-gimp" class="md-nav__link">
+    Archivos en GIMP
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivos en GIMP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formatos-de-archivo-en-gimp" class="md-nav__link">
+    Formatos de archivo en GIMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportar-imagen-como-jpeg" class="md-nav__link">
+    Exportar imagen como jpeg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportar-imagen-como-bmp" class="md-nav__link">
+    Exportar imagen como BMP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reducir-el-tamano-del-archivo" class="md-nav__link">
+    Reducir el tamaño del archivo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Formato de imágenes</h1>
+
+<h2 id="conceptos-base"><FONT COLOR=#007575><strong>Conceptos base</strong></font><a class="headerlink" href="#conceptos-base" title="Permanent link">&para;</a></h2>
+<p>Las siguientes explicaciones se dan para el programa <a href="http://gimp.org.es/">GIMP</a>, el Software Libre de manipulación de imágenes de <a href="https://www.gnu.org/home.es.html">GNU</a> que empleo habitualmente. Se utilizarán las imágenes <a href="https://www.nasa.gov/image-detail/art002e009288/">art002e009288</a> y <a href="https://www.nasa.gov/image-detail/amf-jsc2026e020490/">jsc2026e020490</a> descargadas de <a href="https://www.nasa.gov/gallery/lunar-flyby/">Artemis II Lunar Flyby</a> dentro de los recursos <a href="https://www.nasa.gov/artemis-ii-multimedia/">multimedia Artemis II</a> de la <a href="https://www.nasa.gov/">NASA</a>.</p>
+<p>La información completa está disponible en la documentación en español de GIMP en su <a href="https://docs.gimp.org/es/">Manual de usuario</a>.</p>
+<p>En concreto vamos a ver someramente algunos de los conceptos asociados al menú imagen con la finalidad de optimizar el tamaño de las imágenes en la <strong>microSD</strong> para proceder a redimensionarlas al tamaño adecuado (necesario) para nuestros propósitos.</p>
+<p>Esta tarea es conveniente realizarla antes de grabarlas en la <strong>microSD</strong>, dado que las imágenes en RAM ocupan mucho y pueden provocar "**guru meditatio**n" en el ESP32 provocando que se cuelgue y reinicie.</p>
+<p>También vamos a revisar los conceptos aplicados a GIMP sobre los formatos de imágen soportados en los bloques, es decir formato <strong>BMP</strong> y formato <strong>JPEG</strong>.</p>
+<h3 id="guru-meditation-error"><FONT COLOR=#AA0000>Guru Meditation Error</font><a class="headerlink" href="#guru-meditation-error" title="Permanent link">&para;</a></h3>
+<p>Un "<strong>Guru Meditation Error</strong>" en ESP32-S3 es un fallo crítico o de pánico del sistema (panic) que indica un fallo grave, generalmente relacionado con el acceso ilegal a la memoria, desbordamiento de pila (stack overflow) o un puntero nulo. Al trabajar con imágenes BMP o JPG en pantallas TFT, este error es común si no se gestiona correctamente la memoria o la carga de archivos.</p>
+<p><strong>1. Causas Comunes del "Guru Meditation" con Imágenes</strong></p>
+<ul>
+<li><strong>Falta de Memoria (Heap/Stack)</strong>: Cargar imágenes JPG o BMP muy grandes en la RAM provoca que el ESP32 se quede sin memoria. El ESP32-S3 tiene mucha capacidad, pero las imágenes grandes siguen siendo un problema.</li>
+<li><strong>Punteros Nulos (Null Pointers)</strong>: Intentar dibujar una imagen que no se ha cargado correctamente (por ejemplo, si no se encuentra en la tarjeta SD).</li>
+<li><strong>Problemas de SPI (TFT_eSPI)</strong>: Configuración incorrecta de los pines CS (Chip Select) o DC (Data/Command) en el archivo User_Setup.h, lo que provoca errores de acceso a memoria. Conectando la TFT en la tira de pines hembra destinados a ello en la STEAMakers S3 no se puede dar esté caso siempre que los pines de la pantalla tengan el mismo orden que el de la tira de pines (GND, VCC, SCL, SDA, RST, DC, CS y BL leidos de izquierda a derecha por el frontal y con los USB orientados a la izquierda).</li>
+<li><strong>Archivo de Imagen Corrupto</strong>: Intentar mostrar un archivo que no es un BMP/JPG válido o que está dañado.</li>
+</ul>
+<p><strong>2. Cómo Mostrar Imágenes BMP/JPG y Evitar el Error</strong></p>
+<p>Pasos clave:</p>
+<ul>
+<li><strong>Formato de Imagen</strong>: Asegúrate de que las imágenes BMP sean de 24 bits para Windows y que JPG sea baseline (no progresivo), adaptados a la resolución de tu pantalla de 240x240.</li>
+<li><strong>Uso de Tarjeta SD</strong>: Guarda las imágenes en una tarjeta MicroSD (formateada en FAT32).</li>
+<li><strong>Pinout</strong>: Verifica que los pines de la SD y de la pantalla (TFT) no entren en conflicto.</li>
+</ul>
+<h3 id="tamano-del-lienzo-en-gimp"><FONT COLOR=#AA0000>Tamaño del lienzo en GIMP</font><a class="headerlink" href="#tamano-del-lienzo-en-gimp" title="Permanent link">&para;</a></h3>
+<p>Se denomina lienzo al área visible de una imagen, que normalmente coincide con el tamaño de las capas. El comando permite agrandar o reducir el tamaño del lienzo pudiendo hacer lo mismo con el de las capas, si se desea. Cuando se agranda se crea un espacio libre alrededor de la imagen que se puede rellenar con transparencia o con color. Cuando se reduce, el área visible se recorta, quedando las capas extendidas fuera de los bordes del lienzo. Si existen capas de texto, estas se pueden redimensionar marcando la opción.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/lienzo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Tamaño del lienzo" src="../../img/SM_S3/lienzo.png" /></a>  </p>
+<p></center></p>
+<p>El tamaño de lienzo resulta útil para:</p>
+<ul>
+<li>Añadir algo alrededor de una imagen. Se puede agrandar el tamaño del lienzo, añadir una capa nueva que tendrá el tamaño del nuevo lienzo y pintar en esta nueva capa.</li>
+<li>Recortar una imagen.</li>
+</ul>
+<p>El eslabón de cadena junto a las dimensiones sirve para enlazar o desenlazar los cambios en las dimensiones.</p>
+<p>El primer efecto que se consigue en este caso es reducir el tamaño en disco en disco:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/lienzo_red.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Tamaño de archivos" src="../../img/SM_S3/lienzo_red.png" /></a>  </p>
+<p></center></p>
+<h3 id="tamano-de-la-impresion-en-gimp"><FONT COLOR=#AA0000>Tamaño de la impresión en GIMP</font><a class="headerlink" href="#tamano-de-la-impresion-en-gimp" title="Permanent link">&para;</a></h3>
+<p>Comando que sirve para configurar la resolución de impresión de la imagen, lo que permite cambiar las dimensiones de una imagen impresa y su resolución sin cambiar el número de pixeles en la imagen.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/tam_impres.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Tamaño de la impresión en GIMP" src="../../img/SM_S3/tam_impres.png" /></a>  </p>
+<p></center></p>
+<p>La resolución de la salida determina el número de píxeles usados por la unidad de longitud para la imagen impresa. No hay que confundir la resolución de la salida con la resolución de impresión, que es una característica de la impresora que se expresa en dpi (puntos por pulgada).</p>
+<p>La resolución mostrada en las cajas es la resolución de la imagen original. Si se incrementa la resolución de salida, la página impresa será más pequeña, debido a que se usan más píxeles por unidad de longitud. En consecuencia, y por la misma razón, redimensionar la imagen modifica la resolución.</p>
+<p>Al incrementar la resolución se incrementa la nitidez de la página impresa. Esto es bastante diferente de una simple reducción del tamaño de la imagen al escalarla, ya que no se quitan píxeles ni información de la imagen.</p>
+<h3 id="escalar-la-imagen-en-gimp"><FONT COLOR=#AA0000>Escalar la imagen en GIMP</font><a class="headerlink" href="#escalar-la-imagen-en-gimp" title="Permanent link">&para;</a></h3>
+<p>El comando reduce o amplia el tamaño físico de la imagen cambiando el número de pixeles que contiene. Cambia el tamaño del contenido de la imagen y redimensiona el lienzo.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/escalar.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Escalar la imagen en GIMP" src="../../img/SM_S3/escalar.png" /></a>  </p>
+<p></center></p>
+<p>Los métodos de interpolación que determinan la calidad de la transformación son:</p>
+<ul>
+<li><strong>Ninguno</strong>. El color de cada píxel se copia desde su píxel vecino más cercano en la imagen original. Es el método más rápido pero provoca un efecto “diente de sierra” o pixelado y una imagen de peor calidad.</li>
+</ul>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/mi_ninguno.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Método de interpolación: ninguno" src="../../img/SM_S3/mi_ninguno.png" /></a>  </p>
+<p></center></p>
+<ul>
+<li><strong>Lineal</strong>. El color de cada píxel se calcula como el color promedio de los cuatro píxeles más cercanos en la imagen original. Este método produce un resultado satisfactorio en la mayoría de las imágenes y es un buen compromiso entre velocidad y calidad.</li>
+<li><strong>Cúbica</strong>. El color de cada píxel se calcula como el color promedio de los ocho píxeles más cercanos en la imagen original. Generalmente, produce el mejor resultado, pero necesita más tiempo. Este método se suele llamar <strong>“Bicúbico”</strong>.</li>
+<li><strong>LoHalo, NoHalo</strong>. Halo es un artefacto que se puede crear por interpolación. Para minimizar el halo utilizar NoHalo y si se está reduciendo una imagen el mejor es LoHalo. Aunque esto son simplemente recomendaciones que no hay que tomar al pie de la letra. La siguiente imagen se escala a 960x960 px con resolución de 600 px/in con LoHalo.</li>
+</ul>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/escala_LoHalo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Imagen escalada con LoHalo" src="../../img/SM_S3/escala_LoHalo.png" /></a>  </p>
+<p></center></p>
+<h3 id="recortar-imagen-en-gimp"><FONT COLOR=#AA0000>Recortar imagen en GIMP</font><a class="headerlink" href="#recortar-imagen-en-gimp" title="Permanent link">&para;</a></h3>
+<p>En GIMP se pueden recortar imágenes de dos maneras:</p>
+<ul>
+<li><strong>Recortar a la selección</strong>. Recorta la imagen al contorno seleccionado. En la imagen vemos una selección de 1920x1920px realizada sobre la imagen <a href="../../img/SM_S3/art002e009288orig_cuadrada.jpg"><em>art002e009288orig_cuadrada</em></a>.</li>
+</ul>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/sel1920x1920.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="selección de 1920x1920px" src="../../img/SM_S3/sel1920x1920.png" /></a>  </p>
+<p></center></p>
+<p>A continuación vemos el acceso al comando y el resultado de aplicarlo:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/acc_recorte.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Acceso a comando y recorte realizado" src="../../img/SM_S3/acc_recorte.png" /></a>  </p>
+<p></center></p>
+<ul>
+<li><strong>Recortar al contenido</strong>. Elimina los bordes de una imagen buscando en las capas el borde más amplio posible del área del color.</li>
+<li>El ejemplo de “Recortar al contenido” de la documentación <a href="https://docs.gimp.org/3.0/en/gimp-image-crop.html">6.25. Crop Image → 6. The “Image” Menu</a> explica este tipo de recorte.</li>
+</ul>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/recortar_contenido.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Recortar al contenido" src="../../img/SM_S3/recortar_contenido.png" /></a>  </p>
+<p></center></p>
+<h2 id="archivos-en-gimp"><FONT COLOR=#007575><strong>Archivos en GIMP</strong></font><a class="headerlink" href="#archivos-en-gimp" title="Permanent link">&para;</a></h2>
+<p>GIMP tiene capacidad de leer y escribir en una gran variedad de formatos gráficos utilizando complementos fácilmente ampliables. El formato nativo de archivo en GIMP es XCF y no es un complemento.</p>
+<p>Cuando se abre una imagen jpg como por ejemplo <a href="../../img/SM_S3/art002e009288orig_cuadrada.jpg"><em>art002e009288orig_cuadrada.jpg</em></a> GIMP pregunta si deseas convertir el perfil de color de la imagen al espacio de trabajo nativo de GIMP. Generalmente, seleccionar "Mantener" o "Convertir" no afectará drásticamente el resultado si solo vas a realizar ediciones básicas.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/abrir_art002e009288orig_cuadrada.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Abrir archivo art002e009288orig_cuadrada.jpg" src="../../img/SM_S3/abrir_art002e009288orig_cuadrada.png" /></a>  </p>
+<p></center></p>
+<p>El archivo “art002e009288orig_cuadrada.jpg” se importa como:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/importado_como.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Importado archivo art002e009288orig_cuadrada.jpg" src="../../img/SM_S3/importado_como.png" /></a>  </p>
+<p></center></p>
+<p>El asterisco que precede al nombre indica que el archivo ha sido modificado.</p>
+<h3 id="formatos-de-archivo-en-gimp"><FONT COLOR=#AA0000>Formatos de archivo en GIMP</font><a class="headerlink" href="#formatos-de-archivo-en-gimp" title="Permanent link">&para;</a></h3>
+<p>La mayoría de los formatos que se pueden importar se pueden también exportar.</p>
+<p>El formato XCF es especial ya que almacena todo sobre una imagen a excepción de la información de “deshacer”.</p>
+<p>GIMP permite exportar en gran variedad de formatos aunque solamente vamos a ver los implicados en los bloques TFT que son BMP y JPG. El único formato capaz de guardar toda la información de una imagen es el formato nativo XCF. El resto de formatos preserva algunas propiedades pero pierde otras y es imposible que GIMP sepa cual es la información perdida. Por este motivo cuando se cierra una imagen o al cerrar GIMP se muestre el diálogo siguiente:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/dialog_cerrar.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Diálogo al cerrar GIMP" src="../../img/SM_S3/dialog_cerrar.png" /></a>  </p>
+<p></center></p>
+<h3 id="exportar-imagen-como-jpeg"><FONT COLOR=#AA0000>Exportar imagen como jpeg</font><a class="headerlink" href="#exportar-imagen-como-jpeg" title="Permanent link">&para;</a></h3>
+<p>Los archivos JPEG pueden tener como extensión .jpg, .JPG o .jpeg. Es un formato que comprime las imágenes de forma muy eficiente con un mínima pérdida de calidad. Ningún formato se aproxima en niveles de compresión pero en cambio no soporta transparencia ni multiples capas.</p>
+<p>La ventana de diálogo de exportar a JPEG es:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/dialog_exp_jpeg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Diálogo exportar como jpeg" src="../../img/SM_S3/dialog_exp_jpeg.png" /></a>  </p>
+<p></center></p>
+<p>Sin ánimo de entrar en detalles, sobre todo porque el algoritmo JPEG es muy complejo, vamos a ver  las opciones disponibles:</p>
+<ul>
+<li><strong>Calidad</strong>. Tiene un rango de 0 a 100. Un valor entre 80 y 90 produce excelentes resultados, aunque en algunos casos esta calidad se puede ajustar a valores diferentes. En la imagen siguiente, la imagen de la izquierda está exportada a 50 y la de la derecha a 95.</li>
+</ul>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/calidad_jpeg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Calidad jpeg" src="../../img/SM_S3/calidad_jpeg.png" /></a>  </p>
+<p></center></p>
+<ul>
+<li><strong>Usar los ajustes de calidad de la imagen original</strong>. Si la imagen adjuntó ajustes de calidad particulares (tablas de cuantización) esta opción permite usarlos en lugar de los estándares, siempre que los ajustes que tiene el archivo sean mejores. Si no son mejores la opción estará disponible pero no activada. La opción se habilita para obtener al menos la misma calidad y tamaño de archivo.</li>
+<li><strong>Mostrar vista previa en la ventana de imagen</strong>. Al marcar la opción los cambios se muestran en la pantalla de la imagen sin que se altere la misma. También se se muestra el tamaño aproximado del archivo.</li>
+</ul>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/taman_exp.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Tamaño aproximado del archivo a exportar" src="../../img/SM_S3/taman_exp.png" /></a>  </p>
+<p></center></p>
+<ul>
+<li><strong>Metadatos</strong>. Si la imagen cargada tiene metadatos Exif, XMP, IPTC, estos se conservan o no en la exportación JPEG.</li>
+<li><strong>Guardar miniatura / Guardar perfil de color</strong>. Para aplicaciones que usan una imagen en miniatura para disponer rápidamente de una vista previa de la imagen.</li>
+<li><strong>Comentario</strong>. Para editar el existente o escribir uno nuevo.</li>
+<li><strong>Optimizar</strong>. La optimización de parámetros de <a href="https://en.wikipedia.org/wiki/Entropy_coding#:~:text=Two of the most common,static code may be useful.">codificación por entropía</a> será usada para obtener un archivo mas pequeño aunque requiere mas tiempo.</li>
+<li><strong>Suavizado</strong>. La compresión JPEG divide una imagen en bloques pequeños y reduce la información de color y brillo en cada bloque para crear tamaños de archivo más pequeños. Los artefactos JPEG son distorsiones no deseadas que ocurren cuando una imagen se comprime utilizando el formato JPEG. Se puede establecer un valor entre 0 y 1 que suaviza la imagen al guardarla reduciendo los artefactos aunque provoca cierto desenfoque. Reduce el tamaño del archivo.</li>
+<li><strong>Utilizar codificación aritmética</strong>. La codificación aritmética es un tipo de codificación por entropía (un método de compresión de datos sin pérdida) que se puede utilizar al exportar a formato JPEG. Las imágenes que utilizan la codificación aritmética pueden tener un tamaño entre un 5 % y un 10 % menor.</li>
+<li><strong>Usar marcadores de reinicio</strong>. Se incluyen en la imagen para que esta se cargue por partes.</li>
+<li><strong>Intervalo (filas MCU)</strong>. Las imágenes JPEG se almacenan como una serie de mosaicos cuadrados comprimidos llamados MCU (Minimum Coded Unit o Unidad Mínima de Codificación). En esta opción se puede establecer el tamaño de estos mosaicos (en píxeles) cuando se activa el uso de marcadores de reinicio.</li>
+<li><strong>Progresivo</strong>. Si se activa los fragmentos de imagen se guardan en el archivo de forma que permita un perfeccionamiento gradual de la imagen durante la descarga web en una conexión lenta.</li>
+<li><strong>Submuestreo</strong>. El ojo no es igual de sensible a todo el espectro de color. Se puede usar esto para la compresión del archivo. Los métodos disponibles son:</li>
+</ul>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/submuestreo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Opciones de submuestreo" src="../../img/SM_S3/submuestreo.png" /></a>  </p>
+<p></center></p>
+<p>◦ <strong>4:4:4 (la mejor calidad)</strong>: Preserva los bordes y el contraste de colores con la menor compresión.</p>
+<p>◦ <strong>4:2:2 horizontal (mitad de croma) / 4:2:2 vertical (mitad de croma)</strong>: Muestreo estándar para una buena relación entre calidad de la imagen y tamaño del archivo.</p>
+<p>◦ <strong>4:2:0 (un cuarto de croma)</strong>. Es el que produce los archivos mas pequeños pero con tendencia a desnaturalizar las imágenes.</p>
+<ul>
+<li>
+<p><strong>Método DCT</strong>. DCT (Discrete Cosine Transform o transformada discreta cosenoidal) constituye el primer paso del algoritmo JPEG para pasar del dominio espacial al dominio de la frecuencia. Las opciones disponibles son “float (coma flotante)”, “integer (entero)” que es la predeterminada y “fast integer (entero rápido)”.</p>
+<p>◦ <strong>float</strong>: El método float es más preciso que el método integer, pero es mucho más lento.<br />
+◦ <strong>integer (el valor predeterminado)</strong>: Este método es más rápido que float, pero no tan preciso.<br />
+◦ <strong>fast integer</strong>: El método es mucho menos preciso que los otros dos.</p>
+</li>
+</ul>
+<h3 id="exportar-imagen-como-bmp"><FONT COLOR=#AA0000>Exportar imagen como BMP</font><a class="headerlink" href="#exportar-imagen-como-bmp" title="Permanent link">&para;</a></h3>
+<p>Para exportar una imagen como BMP de Windows en GIMP, ve a Archivo → Exportar como. Asigna un nombre terminado en .bmp o selecciona "Imagen BMP de Windows" en la lista de tipos de archivo, haz clic en "Exportar".</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/exp_bmp.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Exportar como bmp" src="../../img/SM_S3/exp_bmp.png" /></a>  </p>
+<p></center></p>
+<p>Se abre la ventana “Exportar imagen como BMP” siguiente:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/exp_bmp1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Exportar imagen como BMP" src="../../img/SM_S3/exp_bmp1.png" /></a>  </p>
+<p></center></p>
+<p>El formato BMP no gestiona bien las transparencias; si tu imagen tiene fondo transparente, es recomendable aplanarla antes o esperar que GIMP la exporte sin canal alfa por defecto.</p>
+<ul>
+<li><strong>Codificacion run-lenght</strong>: Al exportar como Windows BMP, puedes marcar la casilla para comprimir el archivo. Es especialmente efectivo en imágenes indexadas (con paleta de colores limitada).</li>
+<li><strong>Opciones de compatibilidad</strong>: En las opciones avanzadas, puedes activar o desactivar "No escribir información del espacio de color" si vas a usar la imagen en programas muy antiguos que no reconozcan esos datos extra.</li>
+<li>
+<p><strong>Opciones avanzadas</strong>: para configurar la profundidad de bits específica (como 16, 24 o 32 bits) para tu archivo BMP.</p>
+<p>◦ 16 bits: Ideal para archivos pequeños con degradados simples.<br />
+◦ 24 bits: Es el estándar de alta calidad (8 bits por canal, sin transparencia).<br />
+◦ 32 bits: Úsalo solo si necesitas incluir un canal alfa (transparencia) en el archivo BMP.</p>
+</li>
+</ul>
+<h2 id="reducir-el-tamano-del-archivo"><FONT COLOR=#007575><strong>Reducir el tamaño del archivo</strong></font><a class="headerlink" href="#reducir-el-tamano-del-archivo" title="Permanent link">&para;</a></h2>
+<p>Para conseguir reducir el tamaño de la imagen algo más, se puede convertir la imagen al modo indexado.</p>
+<p>En el submenú “Modo” del menú “Imagen” se puede encontrar el comando junto con otros dos para cambiar el modo de color de la imagen.</p>
+<p>Esto quiere decir que todos los colores se reducirán a sólo 256 valores. No es recomendable para fotografía.</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/mod_index.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Selección del modo indexado" src="../../img/SM_S3/mod_index.png" /></a>  </p>
+<p></center></p>
+<p>Cuando se selecciona aparece la siguiente ventana:</p>
+<p><center></p>
+<p><a class="glightbox" href="../../img/SM_S3/colores_index.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Convertir la imagen a colores indexados" src="../../img/SM_S3/colores_index.png" /></a>  </p>
+<p></center></p>
+<p>Una vez configuradas las opciones haz clic en el botón “Convertir” y la imagen pasará a tener los colores indexados.</p>
+<p>Si utilizas esta opción el tamaño de archivo será mas pequeño y el mismo para JPEG que para BMP.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Copyright y copia; 2026 Federico Coca – <a href="#consent">Cambiar configuración de cookies</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+    
+  
+
+
+
+
+<h4>Consentimiento de cookies</h4>
+<p>Se utilizan cookies para reconocer las visitas repetidas y sus preferencias, así como para medir la eficacia de nuestra documentación y si los usuarios encuentran lo que buscan. Al aceptar, nos ayuda a mejorar nuestra documentación.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rechazar</button>
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="../../plugins/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
