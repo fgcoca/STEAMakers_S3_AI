@@ -9,6 +9,13 @@
   width: 50%; /* Opcional: ajusta el tamaño si lo deseas */
 }
 
+.center-img33 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 33%; /* Opcional: ajusta el tamaño si lo deseas */
+}
+
 .center-img100 {
   display: block;
   margin-left: auto;

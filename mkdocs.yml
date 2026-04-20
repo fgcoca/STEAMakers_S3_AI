@@ -46,11 +46,21 @@ extra:
 # 4. Navegación
 nav:
   - Introducción: index.md
-  - inicio:
+  - Inicio y principios básicos IA:
     - Bienvenida: ini/inicio.md
     - Paso a paso: ini/pap.md
     - Recursos: ini/recursos.md
-
+  - Placa STEAMakers S3:
+    - Notas previas: SM_S3/fundamentos.md
+    - Pinout ESP32: SM_S3/pinout.md
+  - Acerca de:  
+    - USB: SM_S3/usb.md
+    - Formato de imágenes: SM_S3/acerca_img.md
+    - RGB565 / RGB888: SM_S3/acerca_RGB.md
+    - Pantalla  TFT-SPI-ST7788: SM_S3/TFT.md
+  - Programación STEAMakersBlocks:
+    - Introducción: SMB/intro.md
+    - Bloques TFT: SMB/bloques_tft.md
 #- Ayuda:
     #- Chuleta: ayuda/ayuda.md
     #- Chuleta de Markdown: ayuda/markdown.md
