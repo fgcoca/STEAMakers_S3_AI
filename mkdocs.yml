@@ -61,6 +61,7 @@ nav:
   - Programación STEAMakersBlocks:
     - Introducción: SMB/intro.md
     - Bloques TFT: SMB/bloques_tft.md
+    - Reto: SMB/reto.md
 #- Ayuda:
     #- Chuleta: ayuda/ayuda.md
     #- Chuleta de Markdown: ayuda/markdown.md
