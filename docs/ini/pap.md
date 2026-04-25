@@ -128,7 +128,7 @@ Al final deben aparecer los siguientes mensajes:
 ### <FONT COLOR=#AA0000>Conexión WiFi</font>
 Una vez cargado el firmware es necesario resetear la placa. Para resetearla podemos hacerlo de dos maneras: pulsando el botón de reset o desconectando y conectando el cable USB.
 
-Veremos que aparecen en la pantalla de la placa dos datos:
+Veremos que aparecen en la pantalla de la placa estos dos datos:
 
 <center>
 
@@ -136,7 +136,7 @@ Veremos que aparecen en la pantalla de la placa dos datos:
 
 </center>
 
-Para poder conectar la placa a una red WiFi es necesario, primero, conectarse a la red que nos indica en “Connect to:” y, después, introducir en el navegador la IP que nos indica en “Browser“.
+Para poder conectar la placa a una red WiFi es necesario, primero, conectarse a la red que nos indica en “Connect to:” (KEYES-AI-ED30) y, después, introducir en el navegador la IP que nos indica en “Browser“ (http://192.168.4.1).
 
 Una vez hecho esto debería salirnos una página similar a esta:
 
@@ -152,7 +152,17 @@ Aquí es donde debemos establecer los datos de nuestra propia red WiFi para dota
     !!! Note ""
         Es necesario recordar que el ESP32-S3 soporta solamente redes **Wi-Fi de 2.4GHz**
 
-Una vez hecho esto, hay que resetear la placa de nuevo, y ahora nos debe salir un código de 6 dígitos en la pantalla de la placa.
+Tras unos instantes nos aparecerá en pantalla el siguiente mensaje:
+
+<center>
+
+![Configuración Wi-Fi guardada](../img/ini/pant_wifi_exit.png)  
+
+</center>
+
+Y lo único que tienes que hacer es seguir las indicaciones del mensaje, es decir, que la placa se resetea automáticamente y la placa con el nuevo firmware queda conectada a nuestra red Wi-Fi.
+
+Si no ocurre el reseteo, hay que resetear la placa manualmente, y ahora nos debe salir un código de 6 dígitos en la pantalla de la placa.
 
 <center>
 
@@ -186,7 +196,7 @@ Una vez identificados la página nos presenta una bienvenida que, configurada en
 
 <center>
 
-![Bienvenida de ai.keyestudio.com](../img/ini/welcome.png)  
+![Bienvenida de ai.keyestudio.com](../img/ini/bienve.png)  
 
 </center>
 
@@ -252,3 +262,4 @@ Si no obtienes respuesta:
 El agente mantiene un histórico de los diálogos mantenidos que se pueden ver como texto o borrarlos.
 
 ![](../img/ini/chatbot_conv.png){.center-img100}
+
