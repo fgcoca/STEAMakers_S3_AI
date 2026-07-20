@@ -1,7 +1,7 @@
 !!! abstract "Aviso"
     En este momento, la placa permite ser vinculada con un agente y para comunicarse con la plataforma ai.keyestudio.com es necesario el kit del micrófono y el altavoz. Proximamente está previsto que se pueda programar en SteamakersBlocks.
 
-Esta página ofrece una guía paso a paso para poner en marcha la placa ESP32 STEAMakers AI desde cero. Está pensada para alumnado de secundaria, bachillerato y formación profesional, así como para docentes que deseen introducir proyectos de programación e inteligencia artificial en el aula.
+Esta página ofrece una guía paso a paso para poner en marcha la placa ESP32 STEAMakers S3 desde cero. Está pensada para alumnado de secundaria, bachillerato y formación profesional, así como para docentes que deseen introducir proyectos de programación e inteligencia artificial en el aula.
 
 A lo largo de la guía se explican, de forma clara y ordenada, todos los pasos necesarios: desde la primera conexión de la placa al ordenador, la carga del firmware y la vinculación con la plataforma de inteligencia artificial, hasta la realización de las primeras pruebas con un chatbot.
 
@@ -15,10 +15,10 @@ Necesitarás:
 * Un ordenador con sistema operativo Linux, Windows o MacOS
 * Conexión Wi-Fi
 * Cable USB-C de datos (asegurate que es de datos y no sólo de carga)
-* El kit formado por la placa ESP32 STEAMakers AI, el microfóno y el altavoz
+* El kit formado por la placa ESP32 STEAMakers S3, el microfóno y el altavoz
 
 ## <FONT COLOR=#007575>**Presentación**</font>
-### <FONT COLOR=#AA0000>Què és la placa ESP32 STEAMakers AI</font>
+### <FONT COLOR=#AA0000>Què és la placa ESP32 STEAMakers S3</font>
 ESP32 STEAMakers AI es una placa basada en el microcontrolador ESP32-S3, pensada para proyectos educativos STEAM.  
 Permite:
 
@@ -46,7 +46,7 @@ En esta sección nos centraremos en poner la placa en marcha y hacer una primera
 
 ## <FONT COLOR=#007575>**Puesta en marcha**</font>
 ### <FONT COLOR=#AA0000>Primera conexión al ordenador</font>
-Para conectar la placa por primera vez y que sea reconocida, será necesario descargar e instalar el driver CH340. Éste permite la comunicación entre el dispositivo y la ESP32 STEAMakers AI.
+Para conectar la placa por primera vez y que sea reconocida, será necesario descargar e instalar el driver CH340. Éste permite la comunicación entre el dispositivo y la ESP32 STEAMakers S3.
 
 * Accede a la [herramienta web de carga de firmware](https://flash.keyestudio.com/device.html?id=ks5034) y configurala en español si aún no lo está.
 

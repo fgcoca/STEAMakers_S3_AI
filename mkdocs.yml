@@ -1,5 +1,5 @@
 # 1. Información de la web
-site_name: STEAMakers S3 AI
+site_name: STEAMakers S3
 site_description: Información y ejemplos de uso de la placa ESP32 STEAMakers S3 AI centrados especialmente en la pantalla TFT y su programación con STEAMakersBlocks
 site_author: Federico Coca
 site_url: https://fgcoca.github.io/STEAMakers_S3_AI/
@@ -11,7 +11,7 @@ edit_uri: ""
 
 # 3. Footer
 copyright:
-  Copyright &copy; Copyright y copia; 2026 Federico Coca –
+  Copyright &copy; Copyright y copia; 2026 Federico Coca
   <a href="#consent">Cambiar configuración de cookies</a>
 
 extra:
@@ -46,7 +46,7 @@ extra:
 # 4. Navegación
 nav:
   - Introducción: index.md
-  - Inicio y principios básicos IA:
+  - Inicio y principios básicos:
     - Bienvenida: ini/inicio.md
     - Paso a paso: ini/pap.md
     - Recursos: ini/recursos.md

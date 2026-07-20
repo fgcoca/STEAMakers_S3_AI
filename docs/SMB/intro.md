@@ -1,4 +1,4 @@
-# <FONT COLOR=#8B008B>Programación ESP32 STEAMakers AI con STEAMakersBlocks</font>
+# <FONT COLOR=#8B008B>Programación ESP32 STEAMakers S3 con STEAMakersBlocks</font>
 Cuando creamos un proyecto en <FONT COLOR=#0000FF>STEAMakers</font><FONT COLOR=#FF0000>Blocks</font> es fundamental seleccionar correctamente la placa con la que vamos a trabajar.
 
 En el caso de la placa ESP32 STEAMakers AI tenemos dos opciones:

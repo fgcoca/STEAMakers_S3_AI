@@ -1,4 +1,4 @@
-# <FONT COLOR=#8B008B>Notas sobre ESP32 STEAMakers AI</font>
+# <FONT COLOR=#8B008B>Notas sobre ESP32 STEAMakers S3</font>
 ## <FONT COLOR=#007575>**Referencias principales**</font>
 
 * La hoja de datos - [Datasheet ESP32-S3-WROOM-1](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)

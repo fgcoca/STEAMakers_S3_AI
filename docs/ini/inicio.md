@@ -1,4 +1,4 @@
-La placa **ESP32 STEAMakers AI** trabajará con la plataforma ai.keyestudio.com, que es la primera aplicación didáctica de la Inteligencia Artificial en el mundo maker.
+La placa **ESP32 STEAMakers S3** trabajará con la plataforma ai.keyestudio.com, que es la primera aplicación didáctica de la Inteligencia Artificial en el mundo maker.
 
 ![placa ESP32 STEAMakers S3](../img/ini/esp32_steamakers_ai.png){.center-img}
 
